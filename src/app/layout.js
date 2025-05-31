@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Next.js Movie Database",
+  title: "KinoSphere",
   keywords: [
     "Next.js",
     "TMDB API",

@@ -16,9 +16,9 @@ export default function Header() {
         <ThemeSwitch />
         <Link href={"/"} className="flex gap-1 items-center">
           <span className="text-2xl font-bold bg-amber-400 py-1 px-2 rounded-lg">
-            Next.js
+            KinoSphere
           </span>
-          <span className="text-xl hidden sm:inline">Movie Database</span>
+          <span className="text-xl hidden sm:inline">Movies</span>
         </Link>
       </div>
     </div>
