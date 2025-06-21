@@ -34,3 +34,19 @@ body {
   background: var(--navbar-background);
   color: var(--navbar-foreground);
 }
+
+button {
+  background: var(--navbar-background);
+  color: var(--navbar-foreground);
+  border: 1px solid var(--navbar-foreground);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background: var(--navbar-background);
+  color: var(--color-amber-400);
+  border: 1px solid var(--color-amber-400);
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
