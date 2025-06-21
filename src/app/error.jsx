@@ -10,7 +10,7 @@ export default function error({ error, reset }) {
   return (
     <div className="flex flex-col items-center justify-center mt-20">
       <h1>Something went wrong. Please try again later.</h1>
-      <button onClick={() => reset()} className="hover:text-amber-400 ">
+      <button onClick={() => reset()} className="hover:text-amber-400 mt-5">
         Try Again
       </button>
     </div>
