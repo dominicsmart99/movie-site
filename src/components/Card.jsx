@@ -9,7 +9,7 @@ export default function Card({ result }) {
       key={result.id}
       className="group cursor-pointer sm:hover:shadow-lg shadow-gray-900/10 rounded-lg p-4 transition-shadow duration-300 ease-in-out"
     >
-      <Link href={`/movie/${result.id}`}>
+      <Link href={`/${result.media_type ?? "movie"}/${result.id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/original/${
             result.backdrop_path || result.poster_path
@@ -17,6 +17,7 @@ export default function Card({ result }) {
           width={500}
           height={300}
           className="sm:rounded-t-lg group-hover:opacity-50 transition-opacity duration-400 ease-in-out"
+          style={{ maxHeight: "150px", objectFit: "cover" }}
           alt={result.title || result.name}
         />
         <div>
@@ -29,7 +30,7 @@ export default function Card({ result }) {
           <p className="flex items-center text-xs text-gray-500 justify-between">
             <span>{result.release_date || result.first_air_date}</span>
             <span className="flex items-center gap-1">
-              <FiThumbsUp /> {result.vote_count.toLocaleString()}
+              <FiThumbsUp /> {result.vote_count}
             </span>
           </p>
         </div>

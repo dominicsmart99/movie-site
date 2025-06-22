@@ -2,10 +2,11 @@ import React from "react";
 import { FiThumbsUp } from "react-icons/fi";
 import Image from "next/image";
 
-export default async function MoviePage({ params }) {
-  const movieId = await params.id;
+export default async function TVPage({ params }) {
+  console.log("Params:", await params);
+  const movieId = params.id;
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`,
+    `https://api.themoviedb.org/3/tv/${movieId}?api_key=${process.env.API_KEY}`,
     {
       next: { revalidate: 10000 }, // Revalidate every 10 seconds
     }
