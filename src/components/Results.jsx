@@ -1,21 +1,14 @@
 import React from "react";
+import Card from "./Card";
 
 export default function Results({ results }) {
   if (!results || results.length === 0) {
     return <div>No results found</div>;
   }
   return (
-    <div>
+    <div className="sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 max-w-6xl mx-auto p-4 gap-4">
       {results.map((result) => {
-        return (
-          <div key={result.id} className="p-4">
-            <h2 className="text-xl font-bold">{result.title || result.name}</h2>
-            <p className="text-gray-600">{result.overview}</p>
-            <p className="text-sm text-gray-500">
-              Release Date: {result.release_date || result.first_air_date}
-            </p>
-          </div>
-        );
+        return <Card key={result.id} result={result} />;
       })}
     </div>
   );
