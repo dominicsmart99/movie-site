@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "KinoSphere",
+  title: "KinoSphere - Movie and Series Database",
   keywords: [
     "Next.js",
     "TMDB API",
@@ -24,23 +24,23 @@ export const metadata = {
     "Web Development",
     "JavaScript",
   ],
-  description: "Movie database app using Next.js and TMDB API",
+  description: "Explore movies and TV shows with KinoSphere",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
     shortcut: "/favicon-16x16.png",
   },
   openGraph: {
-    title: "Next.js Movie Database",
-    description: "Movie database app using Next.js and TMDB API",
-    url: "https://yourdomain.com",
-    siteName: "Next.js Movie Database",
+    title: "KinoSphere",
+    description: "Explore movies and TV shows with KinoSphere",
+    url: "https://movie-site-peach.vercel.app/",
+    siteName: "KinoSphere",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Next.js Movie Database",
+        alt: "KinoSphere",
       },
     ],
     locale: "en_US",

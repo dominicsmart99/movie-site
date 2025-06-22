@@ -22,7 +22,6 @@ export default function Header() {
           <span className="text-2xl font-bold bg-amber-400 py-1 px-2 rounded-lg">
             KinoSphere
           </span>
-          <span className="text-xl hidden sm:inline">Movies</span>
         </Link>
       </div>
     </div>
