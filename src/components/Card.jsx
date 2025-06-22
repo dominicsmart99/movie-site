@@ -19,19 +19,21 @@ export default function Card({ result }) {
           className="sm:rounded-t-lg group-hover:opacity-50 transition-opacity duration-400 ease-in-out"
           alt={result.title || result.name}
         />
+        <div>
+          <h2 className="text-xl font-bold truncate">
+            {result.title || result.name}
+          </h2>
+          <p className="text-sm line-clamp-2 text-gray-500">
+            {result.overview}
+          </p>
+          <p className="flex items-center text-xs text-gray-500 justify-between">
+            <span>{result.release_date || result.first_air_date}</span>
+            <span className="flex items-center gap-1">
+              <FiThumbsUp /> {result.vote_count.toLocaleString()}
+            </span>
+          </p>
+        </div>
       </Link>
-      <div>
-        <h2 className="text-xl font-bold truncate">
-          {result.title || result.name}
-        </h2>
-        <p className="text-sm line-clamp-2 text-gray-500">{result.overview}</p>
-        <p className="flex items-center text-xs text-gray-500 justify-between">
-          <span>{result.release_date || result.first_air_date}</span>
-          <span className="flex items-center gap-1">
-            <FiThumbsUp /> {result.vote_count.toLocaleString()}
-          </span>
-        </p>
-      </div>
     </div>
   );
 }
