@@ -3,7 +3,9 @@ import React from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-export default function NavbarItem({ title, param }) {
+import { Suspense } from "react";
+
+function NavbarItemContent({ title, param }) {
   const searchParams = useSearchParams();
   const genre = searchParams.get("genre");
   return (
@@ -19,5 +21,13 @@ export default function NavbarItem({ title, param }) {
         {title}
       </Link>
     </div>
+  );
+}
+
+export default function NavbarItem(props) {
+  return (
+    <Suspense fallback={null}>
+      <NavbarItemContent {...props} />
+    </Suspense>
   );
 }
